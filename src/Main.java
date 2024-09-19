@@ -5,13 +5,20 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter year? ");
-        int year = in.nextInt();
+        int year_user_input = in.nextInt();
 
-        if (year % 4 ==0){
-                System.out.println("Its a leap year");
-        } else
-        {
-            System.out.println("Its not a leap year");
+
+        Year year = new Year(365,366);
+
+        boolean is_leap_year = year.is_leap_year(year_user_input);
+
+
+        if (is_leap_year){
+            System.out.println("det är skott år" + is_leap_year);
+        } else {
+            System.out.println("Inte skott år");
         }
+
+
     }
 }
